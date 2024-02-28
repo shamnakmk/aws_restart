@@ -1,0 +1,23 @@
+
+
+Installed and configured the AWS CLI on a Red Hat Linux instance because this instance type does not have the AWS CLI pre-installed. Some instance types, such as Amazon Linux, do come pre-installed with the AWS CLI. 
+
+I established a Secure Shell (SSH) connection to the instance and configured the installation with an access key that can connect to an AWS account. Finally, I practiced using the AWS CLI to interact with AWS Identity and Access Management (IAM).
+
+1.downloaded file to the current directory using:
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
+2.Unziped the installer using:
+unzip -u awscliv2.zip
+
+3.Installed AWS CLI using install script:
+sudo ./aws/install
+
+4.Configured the AWS CLI:
+aws configure 
+and provided the values for the prompts.
+
+5.Tested some CLI commands like:
+aws iam list-users
+aws iam list-policies --scope Local
+aws iam get-policy-version --policy-arn ...
